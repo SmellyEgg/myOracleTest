@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <DataBaseSetting ConncetionString="data source=189;password=test189;persist security info=True;user id=his" />
+  <DataBaseType type="oracle"/>
+</Settings>

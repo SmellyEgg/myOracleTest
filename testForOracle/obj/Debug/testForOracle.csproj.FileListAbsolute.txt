@@ -1,0 +1,9 @@
+c:\users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\bin\Debug\testForOracle.exe.config
+c:\users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\obj\Debug\testForOracle.csprojResolveAssemblyReference.cache
+c:\users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\obj\Debug\testForOracle.Form1.resources
+c:\users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\obj\Debug\testForOracle.Properties.Resources.resources
+c:\users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\obj\Debug\testForOracle.csproj.GenerateResource.Cache
+c:\users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\bin\Debug\testForOracle.exe
+c:\users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\bin\Debug\testForOracle.pdb
+c:\users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\obj\Debug\testForOracle.exe
+c:\users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\obj\Debug\testForOracle.pdb

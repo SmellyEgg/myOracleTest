@@ -1,0 +1,10 @@
+C:\Users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\bin\x86\Debug\testForOracle.exe.config
+C:\Users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\bin\x86\Debug\testForOracle.exe
+C:\Users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\bin\x86\Debug\testForOracle.pdb
+C:\Users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\bin\x86\Debug\Oracle.DataAccess.dll
+C:\Users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\obj\x86\Debug\testForOracle.Form1.resources
+C:\Users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\obj\x86\Debug\testForOracle.Properties.Resources.resources
+C:\Users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\obj\x86\Debug\testForOracle.csproj.GenerateResource.Cache
+C:\Users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\obj\x86\Debug\testForOracle.exe
+C:\Users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\obj\x86\Debug\testForOracle.pdb
+C:\Users\choujidan\documents\visual studio 2015\Projects\testForOracle\testForOracle\obj\x86\Debug\testForOracle.csprojResolveAssemblyReference.cache
