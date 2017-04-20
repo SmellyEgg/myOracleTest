@@ -14,15 +14,29 @@ namespace testForOracle
     {
         OracleConnection conn = null;
         OracleTransaction tx = null;
+        string Err = string.Empty;
         public oracleFactory()
         {
         }
 
         public void SetConnectionStr()
         {
+            //XmlConfigController xc = new XmlConfigController();
+            //string conStr = xc.GetConnStr();
+            conn = new OracleConnection(this.GetConnectStr());
+        }
+
+        private string GetConnectStr()
+        {
             XmlConfigController xc = new XmlConfigController();
+            Controller.CryPassword _cp = new Controller.CryPassword();
+            string drFormat = "data source = {0}; password ={2}; persist security info = True; user id = {1}";
             string conStr = xc.GetConnStr();
-            conn = new OracleConnection(conStr);
+            System.Data.SqlClient.SqlConnectionStringBuilder builder = new System.Data.SqlClient.SqlConnectionStringBuilder(conStr);
+            conStr = string.Format(drFormat, builder.DataSource, builder.UserID, _cp.EnCodeStr(builder.Password));
+            xc = null;
+            _cp = null;
+            return conStr;
         }
 
         public int CreateUser()
@@ -34,7 +48,14 @@ namespace testForOracle
         {
             using (OracleCommand cmd = new OracleCommand())
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
+                }
+                catch
+                {
+                    throw new Exception("打开连接失败！");
+                }
                 cmd.Connection = conn;
                 tx = conn.BeginTransaction();
                 DataSet dtS = new DataSet();
@@ -143,6 +164,26 @@ namespace testForOracle
                     }
                 }
             }
+        }
+
+        public int TestPing()
+        {
+            try
+            {
+                using (OracleCommand cmd = new OracleCommand())
+                {
+                    cmd.Connection = conn;
+                }
+            }
+            catch
+            {
+                return -1;
+            }
+            finally
+            {
+                conn.Close();
+            }
+                return 1;
         }
     }
 }

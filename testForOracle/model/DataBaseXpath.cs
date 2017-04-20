@@ -16,5 +16,10 @@ namespace testForOracle.model
         /// 数据库类型，主要是oracle或者sqlserver
         /// </summary>
         public static readonly string xpathOfDataBaseType = "/Settings/DataBaseType";
+        /// <summary>
+        /// 
+        /// </summary>
+        public static readonly string xpathOfKey = "/Settings/CryKey";
+
     }
 }

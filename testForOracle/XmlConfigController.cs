@@ -30,10 +30,10 @@ namespace testForOracle
             {
                 conStr = this.GetValueByXpath(DataBaseXpath.xpathOfConStr);
             }
-            catch
+            catch(Exception ex)
             {
                 conStr = string.Empty;
-                throw new Exception("没有找到数据库连接节点！");
+                throw new Exception("没有找到数据库连接节点！" + ex.Message);
             }
             return conStr;
         }             
@@ -57,6 +57,25 @@ namespace testForOracle
             return basetype;
         }
 
+        /// <summary>
+        /// 加密密钥
+        /// </summary>
+        /// <returns></returns>
+        public string GetKeyOfCryPd()
+        {
+            string key = string.Empty;
+            try
+            {
+                key = this.GetValueByXpath(DataBaseXpath.xpathOfKey);
+            }
+            catch (Exception ex)
+            {
+                key = string.Empty;
+                throw new Exception("没有找到数据库类型节点！");
+            }
+            return key;
+        }
+
         private string GetValueByXpath(string xpath)
         {
             XmlDocument doc = new XmlDocument();
@@ -70,6 +89,22 @@ namespace testForOracle
             string conStr = node.Attributes[0].Value;
             if (!string.IsNullOrEmpty(conStr)) return conStr;
             return string.Empty;
+        }
+
+        public void SetValueOfDataSource(string nodeValue)
+        {
+            this.SetValueByXpath(DataBaseXpath.xpathOfConStr, nodeValue);
+        }
+
+        private void SetValueByXpath(string xpath, string nodeValue)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(System.IO.File.ReadAllText(path, Encoding.UTF8));
+
+            XmlNode node = doc.SelectSingleNode(xpath);
+            node.Attributes[0].Value = nodeValue;
+
+            doc.Save(path);
         }
 
     }

@@ -9,7 +9,7 @@ using testForOracle.model;
 
 namespace testForOracle.Controller
 {
-    class CdrManager
+    public class CdrManager
     {
         IConnection iconnection;
 
@@ -31,9 +31,14 @@ namespace testForOracle.Controller
                 }
             }
         }
-        public List<Cdr> GetCdrInfo(string dataid)
+        //public List<Cdr> GetCdrInfo(string dataid)
+        //{
+        //    return null;
+        //}
+
+        public int TestPing()
         {
-            return null;
+            return iconnection.TestPing();
         }
 
         private void GetRecordDataByEmpid(string empid)

@@ -53,6 +53,10 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Neusoft.HisCrypto, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\testForWebRequest\testForWebRequest\bin\Debug\Neusoft.HisCrypto.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Oracle.DataAccess.dll</HintPath>
@@ -73,6 +77,8 @@
     <Compile Include="CommonFuntion\Function.cs" />
     <Compile Include="CommonFuntion\Reflector.cs" />
     <Compile Include="Controller\CdrManager.cs" />
+    <Compile Include="Controller\CryPassword.cs" />
+    <Compile Include="Controller\TNSNamesReader.cs" />
     <Compile Include="model\Cdr.cs" />
     <Compile Include="oracleFactory.cs" />
     <Compile Include="dataFill\User.cs" />
@@ -87,6 +93,12 @@
     <Compile Include="model\user.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\FrmSetConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmSetConnection.Designer.cs">
+      <DependentUpon>FrmSetConnection.cs</DependentUpon>
+    </Compile>
     <Compile Include="XmlConfigController.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -100,6 +112,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\FrmSetConnection.resx">
+      <DependentUpon>FrmSetConnection.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -113,9 +128,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="view\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

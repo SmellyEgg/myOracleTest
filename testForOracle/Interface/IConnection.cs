@@ -30,5 +30,10 @@ namespace testForOracle.Interface
         /// 设置连接串
         /// </summary>
         void SetConnectionStr();
+        /// <summary>
+        /// 测试是否联通
+        /// </summary>
+        /// <returns></returns>
+        int TestPing();
     }
 }
