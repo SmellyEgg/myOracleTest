@@ -13,7 +13,6 @@ C:\Users\choujidan\Documents\Visual Studio 2015\Projects\testForOracle\myOracleT
 C:\Users\choujidan\Documents\Visual Studio 2015\Projects\testForOracle\myOracleTest\testForOracle\bin\Debug\testForOracle.exe
 C:\Users\choujidan\Documents\Visual Studio 2015\Projects\testForOracle\myOracleTest\testForOracle\bin\Debug\testForOracle.pdb
 C:\Users\choujidan\Documents\Visual Studio 2015\Projects\testForOracle\myOracleTest\testForOracle\obj\Debug\testForOracle.csprojResolveAssemblyReference.cache
-C:\Users\choujidan\Documents\Visual Studio 2015\Projects\testForOracle\myOracleTest\testForOracle\obj\Debug\testForOracle.Form1.resources
 C:\Users\choujidan\Documents\Visual Studio 2015\Projects\testForOracle\myOracleTest\testForOracle\obj\Debug\testForOracle.Properties.Resources.resources
 C:\Users\choujidan\Documents\Visual Studio 2015\Projects\testForOracle\myOracleTest\testForOracle\obj\Debug\testForOracle.view.FrmSetConnection.resources
 C:\Users\choujidan\Documents\Visual Studio 2015\Projects\testForOracle\myOracleTest\testForOracle\obj\Debug\testForOracle.csproj.GenerateResource.Cache

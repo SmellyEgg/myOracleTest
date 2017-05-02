@@ -14,6 +14,7 @@ namespace testForOracle.view
     public partial class FrmSetConnection : Form
     {
         private string strForFormat = "data source={0};password={2};persist security info=True;user id={1}";
+        private List<string> listCombobox = new List<string>();
         private CryPassword _cp;
         public FrmSetConnection()
         {
@@ -49,7 +50,11 @@ namespace testForOracle.view
             {
                 tnsNames.AddRange(tns.LoadTNSNames(oraclehome));
             }
-            this.cmbDataSource.DataSource = tnsNames;
+            this.cmbDataSource.Items.Clear();
+            //this.cmbDataSource.DataSource = tnsNames;
+            this.cmbDataSource.Items.AddRange(tnsNames.ToArray());
+            this.listCombobox = getComboboxItems(this.cmbDataSource);//获取Item
+
             tns = null;
             if (!object.Equals(oracleHomes, null))
             {
@@ -130,6 +135,52 @@ namespace testForOracle.view
                 MessageBox.Show("连接失败");
             }
             cm = null;
+        }
+
+        private void cmbDataSource_TextUpdate(object sender, EventArgs e)
+        {
+            selectCombobox(cmbDataSource, listCombobox);
+        }
+
+        public List<string> getComboboxItems(ComboBox cb)
+        {
+            //初始化绑定默认关键词  
+            List<string> listOnit = new List<string>();
+            //将数据项添加到listOnit中  
+            for (int i = 0; i < cb.Items.Count; i++)
+            {
+                listOnit.Add(cb.Items[i].ToString());
+            }
+            return listOnit;
+        }
+        //模糊查询Combobox  
+        public void selectCombobox(ComboBox cb, List<string> listOnit)
+        {
+            //输入key之后返回的关键词  
+           List<string> listNew = new List<string>();
+            //清空combobox  
+            cb.Items.Clear();
+            //cb.DataSource = null;
+            //清空listNew  
+            //listNew.Clear();
+            //遍历全部备查数据  
+            foreach (var item in listOnit)
+            {
+                if (item.ToLower().Contains(cb.Text.ToLower()))
+                {
+                    //符合，插入ListNew  
+                    listNew.Add(item);
+                }
+            }
+            //combobox添加已经查询到的关键字  
+            cb.Items.AddRange(listNew.ToArray());
+            //cb.DataSource = listNew;
+            //设置光标位置，否则光标位置始终保持在第一列，造成输入关键词的倒序排列  
+            cb.SelectionStart = cb.Text.Length;
+            //保持鼠标指针原来状态，有时鼠标指针会被下拉框覆盖，所以要进行一次设置  
+            Cursor = Cursors.Default;
+            //自动弹出下拉框  
+            cb.DroppedDown = true;
         }
     }
 }

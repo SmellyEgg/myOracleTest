@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Settings>
-  <DataBaseSetting ConncetionString="data source=JHFC;password=9qjJfytk6IY78Pn/bPKnMQ==;persist security info=True;user id=jhfc" />
+  <DataBaseSetting ConncetionString="data source=ZWHIS;password=Jy1tsb/jW5tbm3VdB46c+Q==;persist security info=True;user id=his" />
   <DataBaseType type="oracle" />
   <CryKey key="choujidan" />
 </Settings>

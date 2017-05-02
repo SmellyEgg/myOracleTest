@@ -101,6 +101,7 @@
             this.cmbDataSource.Size = new System.Drawing.Size(178, 20);
             this.cmbDataSource.TabIndex = 7;
             this.cmbDataSource.SelectedIndexChanged += new System.EventHandler(this.cmbDataSource_SelectedIndexChanged);
+            this.cmbDataSource.TextUpdate += new System.EventHandler(this.cmbDataSource_TextUpdate);
             // 
             // txtCurrentDataSource
             // 
