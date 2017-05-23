@@ -13,6 +13,9 @@ namespace testForOracle.view
 {
     public partial class FrmSetConnection : Form
     {
+        /// <summary>
+        /// 数据源格式
+        /// </summary>
         private string strForFormat = "data source={0};password={2};persist security info=True;user id={1}";
         private List<string> listCombobox = new List<string>();
         private CryPassword _cp;
@@ -125,16 +128,22 @@ namespace testForOracle.view
 
         private void btnTestPing_Click(object sender, EventArgs e)
         {
-            CdrManager cm = new CdrManager();
-            if(cm.TestPing() == 1)
-            {
-                MessageBox.Show("连接成功");
-            }
-            else
-            {
-                MessageBox.Show("连接失败");
-            }
-            cm = null;
+            //CdrManager cm = new CdrManager();
+            ////cm.ExcuteSql(@"insert into SUIFANG(ID) values ('1');select * from SUIFANG");
+            ////if(cm.TestPing() == 1)
+            ////{
+            ////    MessageBox.Show("连接成功");
+            ////}
+            ////else
+            ////{
+            ////    MessageBox.Show("连接失败");
+            ////}
+            //if (!object.Equals(cm, null))
+            //{
+            //    cm = null;
+            //}
+            frmForData frm = new frmForData();
+            frm.ShowDialog();
         }
 
         private void cmbDataSource_TextUpdate(object sender, EventArgs e)
@@ -181,6 +190,12 @@ namespace testForOracle.view
             Cursor = Cursors.Default;
             //自动弹出下拉框  
             cb.DroppedDown = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DecodeFrm df = new DecodeFrm();
+            df.ShowDialog();
         }
     }
 }

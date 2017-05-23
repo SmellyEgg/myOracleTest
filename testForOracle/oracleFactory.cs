@@ -102,14 +102,23 @@ namespace testForOracle
         {
             using (OracleCommand cmd = new OracleCommand())
             {
+                conn.Open();
                 cmd.Connection = conn;
                 tx = conn.BeginTransaction();
                 try
                 {
                     if (!String.IsNullOrEmpty(sql))
                     {
-                        cmd.CommandText = sql;
-                        return cmd.ExecuteNonQuery();
+                        string[] strlst = null;
+                        strlst = sql.Split(';');
+                        cmd.CommandText = strlst[0];
+                        cmd.ExecuteNonQuery();
+                        cmd.CommandText = strlst[1];
+                        OracleDataReader reader = cmd.ExecuteReader();
+
+                        return 1;
+                        //cmd.CommandText = sql;
+                        //return cmd.ExecuteNonQuery();
                     }
                     tx.Commit();
                 }
@@ -129,6 +138,10 @@ namespace testForOracle
             return 0;
         }
 
+        public void Dispose()
+        {
+
+        }
 
         public void ExecuteSqlTran(string conStr, List<String> SQLStringList)
         {

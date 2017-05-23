@@ -9,10 +9,17 @@ using testForOracle.model;
 namespace testForOracle
 {
    
-    class XmlConfigController
+    public class XmlConfigController
     {
-        //配置文件路径
+
+        /// <summary>
+        /// 配置文件路径
+        /// </summary>
         private string path = System.Windows.Forms.Application.StartupPath + @"\oracleConfig.xml";
+        /// <summary>
+        /// 错误信息
+        /// </summary>
+        public string _errCode = string.Empty;
 
         public XmlConfigController()
         {
@@ -71,6 +78,7 @@ namespace testForOracle
             catch (Exception ex)
             {
                 key = string.Empty;
+                this._errCode = ex.Message;
                 throw new Exception("没有找到数据库类型节点！");
             }
             return key;

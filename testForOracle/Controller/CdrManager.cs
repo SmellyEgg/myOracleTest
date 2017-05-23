@@ -41,6 +41,21 @@ namespace testForOracle.Controller
             return iconnection.TestPing();
         }
 
+        public int ExcuteSql(string sql)
+        {
+            return iconnection.ExcuteNoQuery(sql);
+        }
+
+        /// <summary>
+        /// 查询数据
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <returns></returns>
+        public DataSet ExcuteSqlWithQuery(string sql)
+        {
+            return iconnection.ExcuteQuerySql(sql);
+        }
+
         private void GetRecordDataByEmpid(string empid)
         {
             if (object.Equals(iconnection, null))

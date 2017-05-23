@@ -38,6 +38,7 @@
             this.txtCurrentDataSource = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnTestPing = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -129,11 +130,22 @@
             this.btnTestPing.UseVisualStyleBackColor = true;
             this.btnTestPing.Click += new System.EventHandler(this.btnTestPing_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(316, 209);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "解密";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmSetConnection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 328);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnTestPing);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCurrentDataSource);
@@ -146,6 +158,7 @@
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "FrmSetConnection";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "连接串设置";
             this.Load += new System.EventHandler(this.FrmSetConnection_Load);
             this.ResumeLayout(false);
@@ -165,5 +178,6 @@
         private System.Windows.Forms.TextBox txtCurrentDataSource;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnTestPing;
+        private System.Windows.Forms.Button button1;
     }
 }

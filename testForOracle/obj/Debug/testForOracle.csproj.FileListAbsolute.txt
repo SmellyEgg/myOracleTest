@@ -17,3 +17,5 @@ C:\Users\choujidan\Documents\Visual Studio 2015\Projects\testForOracle\myOracleT
 C:\Users\choujidan\Documents\Visual Studio 2015\Projects\testForOracle\myOracleTest\testForOracle\obj\Debug\testForOracle.view.FrmSetConnection.resources
 C:\Users\choujidan\Documents\Visual Studio 2015\Projects\testForOracle\myOracleTest\testForOracle\obj\Debug\testForOracle.csproj.GenerateResource.Cache
 C:\Users\choujidan\Documents\Visual Studio 2015\Projects\testForOracle\myOracleTest\testForOracle\bin\Debug\Neusoft.HisCrypto.dll
+C:\Users\choujidan\Documents\Visual Studio 2015\Projects\testForOracle\myOracleTest\testForOracle\obj\Debug\testForOracle.view.DecodeFrm.resources
+C:\Users\choujidan\Documents\Visual Studio 2015\Projects\testForOracle\myOracleTest\testForOracle\obj\Debug\testForOracle.view.frmForData.resources
